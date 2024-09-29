@@ -6,14 +6,31 @@
     <meta name="description" content="Splash page for my personal website and Foundry instace!">
     <title>Metal Queer Holic</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- <script src="script.js" defer></script> Link to your JavaScript file -->
+    <script src="script.js" defer></script>
+
 </head>
 <body>
     <header>
         <h1>Metal Queer Holic</h1>
     </header>
     <main>
-        <section>
+        <!-- <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'London')">London</button>
+            <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+            <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+        </div> -->
+
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'game')" id="defaultOpen">Game</button>
+            <button class="tablinks" onclick="openTab(event, 'links')">Lancer Links</button>
+            <button class="tablinks" onclick="openTab(event, 'about')">Other</button>
+        </div>
+
+        <div id="game" class="tabcontent">
+            <h2>HEY NERDS!</h2>
+            <h3><a href="./foundry">Access Foundry HERE!</a></h3>
+        </div>
+        <div id="links" class="tabcontent">
             <h2>Links</h2>
             <p>Here I've compiled some useful resources for anyone looking to play or host Lancer. If you have any burning recommendations please reach out!</p>
             <ul>
@@ -24,18 +41,22 @@
                 <li><a href="https://interpoint-station.itch.io/lancer-map-creation-tool">Lancer Map Creation Tool</a> by Interpoint - A popular map editor I've seen floating around. Most first party modules come with pre-made mapsets.</li>
                 <li><a href="https://foundryvtt.com/">Foundry Virtual Tabletop</a> - Recommended alternative to Roll20. Not free. Requires elbow grease.</li>
             </ul>
-        </section>
+        </div>
+        <div id="about" class="tabcontent">
+            <h2>Hi</h2>
+            <p>My name is Cassandra. Amateur musician, artist, and developer. This is my personal website that I use to host an instance of FoundryVTT. In the future, I hope to feature some other personal projects here too! If you don't already know this, how the hell did you get here?</p>
 
-        <section>
-            <h2>Welcome</h2>
-            <p>
-                
-            </p>
-        </section>
+        </div>
+
+        
 
     </main>
     <footer>
         <!-- <p>&copy; 2024 Your Name. All rights reserved.</p> -->
     </footer>
+
+    <script>
+        document.getElementById("defaultOpen").click()
+    </script>
 </body>
 </html>
