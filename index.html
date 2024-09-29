@@ -6,7 +6,13 @@
     <meta name="description" content="Splash page for my personal website and Foundry instace!">
     <title>Metal Queer Holic</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+
+    <script src="./script.js" defer></script>
+    <script type="text/javascript">
+        window.onload = function(){
+            document.getElementById("defaultOpen").click()
+        }
+    </script>
 
 </head>
 <body>
@@ -14,11 +20,6 @@
         <h1>Metal Queer Holic</h1>
     </header>
     <main>
-        <!-- <div class="tab">
-            <button class="tablinks" onclick="openCity(event, 'London')">London</button>
-            <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-            <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
-        </div> -->
 
         <div class="tab">
             <button class="tablinks" onclick="openTab(event, 'game')" id="defaultOpen">Game</button>
@@ -54,9 +55,6 @@
     <footer>
         <!-- <p>&copy; 2024 Your Name. All rights reserved.</p> -->
     </footer>
-
-    <script>
-        document.getElementById("defaultOpen").click()
-    </script>
 </body>
 </html>
+
