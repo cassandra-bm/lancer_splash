@@ -9,7 +9,10 @@
     --white: #ffffff;
 }
 
-
+@font-face{
+    font-family: JacBas;
+    src: url(./fonts/JacquardaBastarda9-Regular.ttf)
+}
 
  
 * {
@@ -29,32 +32,40 @@ header {
     background-color: var(--massif-light-red);
     color: var(--white);
 
-    padding: 20px;
+    padding: 0 5%;
     text-align: center;
 }
 
 h1 {
+    font-family: 'JacBas';
+    font-size: 7rem;
 }
 
 .tab {
     overflow: hidden;
     /* border: 1px solid #ccc; */
     background-color: var(--massif-light-red);
+
     display: flex;
     flex-direction: row;
-    /* align-items: center; */
     justify-content: center;
   }
 
 .tab button {
+    font-family: JacBas;
+    font-size: 2rem;
+
     background-color: inherit;
     float: left;
     border: none;
+    border-color: var(--massif-night);
     outline: none;
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
     color: white;
+    
+    flex-grow: 1;
   }
 
 .tab button:hover {
