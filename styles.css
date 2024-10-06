@@ -74,7 +74,7 @@ main {
     background-color: #0f0b0b;
 }
 
-section#tabframe {
+#tabframe {
     background: var(--massif-gray);
     width: 90%;
 
@@ -82,7 +82,7 @@ section#tabframe {
 }
 
 .tabcontent {
-    display: none;
+    /* display: none; */
     padding: 6px 12px;
     border-top: none;
     
@@ -93,12 +93,29 @@ section#tabframe {
     /* position: sticky; */
     /* top: 0; */
     display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
+    flex-direction: row;
+    /* justify-content: start;
+    align-items: center; */
     
     color: white;
 }
+
+.contentpanel {
+    margin: 2%;
+    /* border: solid 1px  var(--massif-night);
+    border-radius: 1px; */
+    border-radius: 2%;
+    
+    padding: 2% 5%;
+    /* justify-content: center; */
+    background-color: var(--massif-night);
+    /* display: flex; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .icon-large {
     /* max-width: 100%; */

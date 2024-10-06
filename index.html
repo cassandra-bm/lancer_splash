@@ -22,34 +22,98 @@
     <main>
 
         <div class="tab">
-            <button class="tablinks" onclick="openTab(event, 'game')" id="defaultOpen">Game</button>
-            <button class="tablinks" onclick="openTab(event, 'links')">Lancer Links</button>
-            <button class="tablinks" onclick="openTab(event, 'about')">Other</button>
+            <button class="tablinks" onclick="openTab(event, 'game')" id="defaultOpen">Lancer</button>
+            <button class="tablinks" onclick="openTab(event, 'about')">About</button>
         </div>
 
-        <section id="tabframe">
+        <div id="tabframe">
             <div id="game" class="tabcontent">
-                <h2>NERDS: Connect to Foundry HERE!</h2>
-                <h3><a href="./foundry"><img src="assets/fvtt-d20.png" alt="FoundryVTT Logo, D20 Variant" class="icon-large"></a></h3>
+                <div class="contentpanel">
+                    <h2>NERDS!</h2>
+                    <h3><a href="./foundry"><img src="assets/fvtt-d20.png" alt="FoundryVTT Logo, D20 Variant" class="icon-large"></a></h3>
+                </div>
+                <div class="contentpanel">
+                    <h2>Links</h2>
+                    <p>Here I've compiled some useful resources for anyone looking to play or host Lancer. If you have any burning recommendations please reach out!</p>
+                    <table>
+                        <caption>Lancer Links</caption>
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <th><a href="https://massif-press.itch.io/corebook-pdf">Lancer Core Book</a></th>
+                                <td>Essential Skimming - free version <a href="https://massif-press.itch.io/corebook-pdf-free">here</a>!</td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <a href="https://lancer-rules.carrd.co/">Lancer Cards</a>
+                                </th>
+                                <td>
+                                    <p>
+
+                                        Quick reference Lancer rules
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <a href="https://compcon.app/#/">COMP/CON</a>
+                                </th>
+                                <td>
+                                    <p>
+
+                                        Virtual character sheet manager and compendium.
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <a href="https://www.retrogrademinis.com/">RetroGrade Minis</a>
+                                </th>
+                                <td>
+                                    <p>
+
+                                        Pixel art tool!
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+
+                                    <a href="https://interpoint-station.itch.io/lancer-map-creation-tool">Lancer Map Creation Tool</a>
+                                </th>
+                                <td>
+                                    <p>
+                                        Map Editor!
+                                    </p>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <th>
+                                    <a href="https://foundryvtt.com/">Foundry Virtual Tabletop</a>
+                                </th>
+                                <td>
+                                    <p>
+                                        Preferred tool to run Lancer with.
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <ul>
+                    </ul>
+                </div>
             </div>
-            <div id="links" class="tabcontent">
-                <h2>Links</h2>
-                <p>Here I've compiled some useful resources for anyone looking to play or host Lancer. If you have any burning recommendations please reach out!</p>
-                <ul>
-                    <li><a href="https://massif-press.itch.io/corebook-pdf">Lancer Core Book</a> - Everything you need to know - free version <a href="https://massif-press.itch.io/corebook-pdf-free">here</a>!</li>
-                    <li><a href="https://lancer-rules.carrd.co/">Lancer Cards</a> - Quick reference for almost all lancer rules!</li>
-                    <li><a href="https://compcon.app/#/">COMP/CON</a> - Online character sheet editor and knowledge compendium. It's modular!</li>
-                    <li><a href="https://www.retrogrademinis.com/">RetroGrade Minis</a> - Create beautiful custom sprite art for PC and NPC tokens! Very free, but requires a wee Patreon subscription for export convenience.</li>
-                <li><a href="https://interpoint-station.itch.io/lancer-map-creation-tool">Lancer Map Creation Tool</a> by Interpoint - A popular map editor I've seen floating around. Most first party modules come with pre-made mapsets.</li>
-                <li><a href="https://foundryvtt.com/">Foundry Virtual Tabletop</a> - Recommended alternative to Roll20. Not free. Requires elbow grease.</li>
-            </ul>
-            </div>
+            
             <div id="about" class="tabcontent">
-                <h2>Hi</h2>
-                <p>My name is Cassandra. Amateur musician, artist, and developer. This is my personal website that I use to host an instance of FoundryVTT. In the future, I hope to feature some other personal projects here too! If you don't already know this, how the hell did you get here?</p>
+                <div class="contentpanel">
+                    <h2>Hi</h2>
+                    <p>My name is Cassandra. Amateur musician, artist, and developer. This is my personal website that I use to host an instance of FoundryVTT. In the future, I hope to feature some other personal projects here too! If you don't already know this, how the hell did you get here?</p>
+
+                </div>
 
             </div>
-        </section>
+        </div>
 
         
 
