@@ -32,10 +32,12 @@ header {
 
 h1 {
     font-family: 'JacBas';
-    font-size: 7rem;
+    font-size: 4rem;
 }
 
 .tab {
+    position: sticky;
+    top: 0px;
     overflow: hidden;
     background-color: var(--massif-light-red);
     display: flex;
@@ -74,11 +76,7 @@ main {
 
 section#tabframe {
     background: var(--massif-gray);
-    /* height: 100%; */
-    height: 100vh;
-    height: stretch;
     width: 90%;
-    /* position: absolute;  */
 
     margin: 0% 5%;
 }
@@ -88,25 +86,32 @@ section#tabframe {
     padding: 6px 12px;
     border-top: none;
     
-    padding: 10%;
+    padding: 5%;
     animation: fadeEffect 1s;
-    
-    
+
+    height: 100vh;
+    /* position: sticky; */
+    /* top: 0; */
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
     
     color: white;
-    /* flex-grow: 1; */
-    /* align-items: center; */
-    /* display: flex;
-    flex-direction: row; */
 }
-/* 
-.tabcontent h2 h3 {
-    align-items: center;
-} */
+
+.icon-large {
+    /* max-width: 100%; */
+    width: 25vh;
+    /* height: auto; */
+}
+
+.icon-small {
+    max-width: 100%;
+    height: auto;
+}
+
+
 
 @keyframes fadeEffect{
     from {opacity: 0; }
