@@ -1,97 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Splash page for my personal website and Foundry instace!">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Splash page for my personal website and Foundry instace!"
+    />
 
     <title>Metal Queer Holic</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
 
+    <!-- more scripts in here bro-->
     <script src="./script.js" defer></script>
 
     <script type="text/javascript">
-        window.onload = function(){
-            document.getElementById("defaultOpen").click()
-        }
+      window.onload = function () {
+        document.getElementById("defaultOpen").click();
+      };
     </script>
+  </head>
 
-</head>
-<body>
+  <body>
     <header>
-        <h1>Metal Queer Holic</h1>
+      <h1>Metal Queer Holic</h1>
     </header>
+
     <main>
+      <div class="tab">
+        <button
+          class="tablinks"
+          onclick="loadSection('lancer')"
+          ,
+          id="defaultOpen"
+        >
+          Lancer
+        </button>
+        <button class="tablinks" onclick="loadSection('about')">About</button>
+        <button class="tablinks" onclick="loadSection('music')">Music</button>
+        <button class="tablinks" onclick="loadSection('games')">
+          Game Dev
+        </button>
+      </div>
 
-        <div class="tab">
-            <button class="tablinks" onclick="openTab(event, 'game')" id="defaultOpen">Lancer</button>
-            <button class="tablinks" onclick="openTab(event, 'about')">About</button>
-        </div>
-
-        <div id="tabframe">
-            <div id="game" class="tabcontent">
-                <div class="contentpanel">
-                    <h2>NERDS!</h2>
-                    <h3><a href="./foundry"><img src="assets/fvtt-d20.png" alt="FoundryVTT Logo, D20 Variant" class="icon-large"></a></h3>
-                </div>
-                <div class="contentpanel">
-                    <h2>Links</h2>
-                    <p>Here I've compiled some useful resources for anyone looking to play or host Lancer. If you have any burning recommendations please reach out!</p>
-                    <table>
-                        <caption>Lancer Links</caption>
-                        <thead></thead>
-                        <tbody>
-                            <tr>
-                                <th><a href="https://massif-press.itch.io/corebook-pdf">Lancer Core Book</a></th>
-                                <td>Essential Skimming - free version <a href="https://massif-press.itch.io/corebook-pdf-free">here</a>!</td>
-                            </tr>
-                            <tr>
-                                <th><a href="https://lancer-rules.carrd.co/">Lancer Cards</a></th>
-                                <td><p>Quick reference Lancer rules</p></td>
-                            </tr>
-                            <tr>
-                                <th><a href="https://compcon.app/#/">COMP/CON</a></th>
-                                <td><p>Virtual character sheet manager and compendium.</p></td>
-                            </tr>
-                            <tr>
-                                <th><a href="https://www.retrogrademinis.com/">RetroGrade Minis</a></th>
-                                <td><p>Pixel art tool!</p></td>
-                            </tr>
-                            <tr>
-                                <th><a href="https://interpoint-station.itch.io/lancer-map-creation-tool">Lancer Map Creation Tool</a></th>
-                                <td><p>Map Editor!</p></td>
-                            </tr>
-                            <tr>
-                                <th><a href="https://foundryvtt.com/">Foundry Virtual Tabletop</a></th>
-                                <td><p>Preferred tool to run Lancer with.</p></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <ul>
-                    </ul>
-                </div>
-            </div>
-            
-            <div id="about" class="tabcontent">
-                <div class="contentpanel">
-                    <h2>Hi</h2>
-                    <p>My name is Cass. Amateur musician, artist, and developer. This is my personal website that I use to host an instance of FoundryVTT. In the future, I hope to feature some other personal projects here too! If you don't already know this, how the hell did you get here?</p>
-                </div>
-                <div class="contentpanel">
-                    <h2>Other Projects</h2>
-                    <!-- <p>Nothing yet! At least, nothing I want to share here.</p> -->
-                    <img src="assets/under_construction_1.gif" alt="Flashing neon sign that says Under Construction">
-                </div>
-
-            </div>
-        </div>
-
-        
-
+      <div id="content"></div>
     </main>
     <footer>
-        <!-- <p>&copy; 2024 Your Name. All rights reserved.</p> -->
+      <!-- <p>&copy; 2024 Your Name. All rights reserved.</p> -->
     </footer>
-</body>
+  </body>
 </html>
-

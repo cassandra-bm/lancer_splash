@@ -1,69 +1,68 @@
 /* Reset some default browser styles */
 :root {
-    --massif-light-red: #e52f41;
-    --massif-red: #af0e1e;
-    --massif-ash: #61675b;
-    --massif-navy-blue: #315659;
-    --massif-gray: #24292e;
-    --massif-night: #0f0b0b;
-    --white: #ffffff;
+  --massif-light-red: #e52f41;
+  --massif-red: #af0e1e;
+  --massif-ash: #61675b;
+  --massif-navy-blue: #315659;
+  --massif-gray: #24292e;
+  --massif-night: #0f0b0b;
+  --white: #ffffff;
 }
 
-@font-face{
-    font-family: JacBas;
-    src: url(./fonts/JacquardaBastarda9-Regular.ttf)
+@font-face {
+  font-family: JacBas;
+  src: url(./fonts/JacquardaBastarda9-Regular.ttf);
 }
 
- 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} 
-
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 header {
-    background-color: var(--massif-light-red);
-    color: var(--white);
-    padding: 0 5%;
-    text-align: center;
+  background-color: var(--massif-light-red);
+  color: var(--white);
+  padding: 0 5%;
+  text-align: center;
 }
-
 
 h1 {
-    font-family: 'JacBas';
-    font-size: 4rem;
+  font-family: "JacBas";
+  font-size: 4rem;
 }
 
+/* 
+tab and tab button target the tabs at the top of the page */
 .tab {
-    position: sticky;
-    top: 0px;
-    overflow: hidden;
-    background-color: var(--massif-light-red);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
+  position: sticky;
+  top: 0px;
+  overflow: hidden;
+  background-color: var(--massif-light-red);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
 .tab button {
-    font-family: JacBas;
-    font-size: 2rem;
+  font-family: JacBas;
+  font-size: 2rem;
 
-    background-color: inherit;
-    float: left;
-    border: none;
-    border-color: var(--massif-night);
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    color: white;
-    
-    flex-grow: 1;
-  }
+  background-color: inherit;
+  float: left;
+  border: none;
+  border-color: var(--massif-night);
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  color: white;
+
+  flex-grow: 1;
+}
 
 .tab button:hover {
-    background-color: var(--massif-red);
+  background-color: var(--massif-red);
 }
 
 /* body {
@@ -71,71 +70,109 @@ h1 {
 } */
 
 main {
-    background-color: #0f0b0b;
+  background-color: #0f0b0b;
 }
 
-#tabframe {
-    background: var(--massif-gray);
-    width: 90%;
-
-    margin: 0% 5%;
+#content {
+  background: var(--massif-gray);
+  /* adjust these two to control width of grey strip */
+  width: 80%;
+  margin: 0% 10%;
 }
 
-.tabcontent {
-    /* display: none; */
-    padding: 6px 12px;
-    border-top: none;
-    
-    padding: 5%;
-    animation: fadeEffect 1s;
+/* 
+the content_page class should fully wrap the individual html pages
+it fixes the flex scrolling and adds a fade effect to the
+page transitions */
+.content_page {
+  /* display: none; */
+  padding: 6px 12px;
+  border-top: none;
 
-    height: 100vh;
-    /* position: sticky; */
-    /* top: 0; */
-    display: flex;
-    flex-direction: row;
-    /* justify-content: start;
+  padding: 5%;
+  animation: fadeEffect 1s;
+
+  height: 100vh;
+  /* position: sticky; */
+  /* top: 0; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: start;
     align-items: center; */
-    
-    color: white;
+
+  color: white;
 }
 
-.contentpanel {
-    margin: 2%;
-    /* border: solid 1px  var(--massif-night);
+/* 
+individual section of a page
+an article!!! */
+.content_article {
+  margin: 2%;
+  /* border: solid 1px  var(--massif-night);
     border-radius: 1px; */
-    border-radius: 2%;
-    
-    padding: 2% 5%;
-    /* justify-content: center; */
-    background-color: var(--massif-night);
-    /* display: flex; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  /*     
+  border-radius: 2%; */
+
+  padding: 2% 5%;
+  /* justify-content: center; */
+  background-color: var(--massif-night);
+
+  box-shadow: 0px 0px 5px black;
+  /* display: flex; */
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
 }
 
+/* underlines and pads an article title
+should use h2 for article titles and h3 for subsections */
+.content_article h2 {
+  border-bottom: solid 2px white;
+  margin: 0 0 2% 0;
+}
 
-.icon-large {
-    /* max-width: 100%; */
-    width: 25vh;
-    /* height: auto; */
+/* will format content side by side - intended for two items 
+only. kind of a traditional way to display little chunks of
+text + image  */
+.side_gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.side_view .icon-large {
+  /* max-width: 100%; */
+  width: 25vh;
+  display: flex;
+  flex-direction: row;
+  /* height: auto; */
 }
 
 .icon-small {
-    max-width: 100%;
-    height: auto;
+  max-width: 20%;
+  height: auto;
 }
 
-
-
-@keyframes fadeEffect{
-    from {opacity: 0; }
-    to {opacity: 1; }
+/* temporary measure to get side gallery items to show correctly */
+.flex_gallery_item {
+  flex-basis: 100%;
+}
+.flex_gallery_item p {
+  margin: 10px 0;
 }
 
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
