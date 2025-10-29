@@ -20,6 +20,8 @@ rm -rf "${TARGET_DIR:?}/*"
 # Copy all contents of the current directory to the target directory
 cp -r ./assets "$TARGET_DIR"
 cp -r ./fonts "$TARGET_DIR"
+cp -r ./games "$TARGET_DIR"
+cp -r ./sections "$TARGET_DIR"
 cp -r ./index.html "$TARGET_DIR"
 cp -r ./script.js "$TARGET_DIR"
 cp -r ./styles.css "$TARGET_DIR"
