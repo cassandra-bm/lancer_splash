@@ -135,13 +135,6 @@ should use h2 for article titles and h3 for subsections */
 /* will format content side by side - intended for two items 
 only. kind of a traditional way to display little chunks of
 text + image  */
-.side_gallery {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: flex-start;
-  justify-content: space-evenly;
-}
 
 .side_view .icon-large {
   /* max-width: 100%; */
@@ -157,10 +150,25 @@ text + image  */
 }
 
 /* temporary measure to get side gallery items to show correctly */
-.flex_gallery_item {
+
+.side_gallery {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.side_gallery_item {
   flex-basis: 100%;
 }
-.flex_gallery_item p {
+.side_gallery_item img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+.side_gallery_item p {
   margin: 10px 0;
 }
 
@@ -175,4 +183,8 @@ text + image  */
 
 ul {
   list-style-type: none;
+}
+
+a {
+  color: yellowgreen;
 }
