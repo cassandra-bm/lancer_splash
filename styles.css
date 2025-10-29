@@ -92,7 +92,10 @@ page transitions */
   padding: 5%;
   animation: fadeEffect 1s;
 
-  height: 100vh;
+  /* THIS motherfucker splinches my fucking background */
+  /* height: 100vh; */
+  min-height: 100vh;
+
   /* position: sticky; */
   /* top: 0; */
   display: flex;
